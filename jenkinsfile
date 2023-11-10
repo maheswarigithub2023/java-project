@@ -1,0 +1,15 @@
+pipeine{
+    
+    agent any
+
+    stages {
+
+        stage('clean worspace'){
+
+            steps{
+                
+                cleanWs()
+            }
+        }
+    }
+}
