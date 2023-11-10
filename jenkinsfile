@@ -7,8 +7,10 @@ pipeine{
         stage('clean worspace'){
 
             steps{
-                
-                cleanWs()
+
+                script {
+                    cleanWs()
+                }
             }
         }
     }
