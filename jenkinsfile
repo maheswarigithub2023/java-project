@@ -34,7 +34,7 @@ pipeline{
         stage('build'){
             steps{
 
-                sh 'mvn package -Dskiptests'
+                sh 'mvn jar:jar'
             }
         }
     }
