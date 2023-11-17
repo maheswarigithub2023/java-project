@@ -25,12 +25,7 @@ pipeline{
                     sh 'mvn compile'
                 }
             }
-        }
-        stage('junit test'){
-            steps{
-                sh 'mvn surefire:test'
-            }
-        }
+        }        
         stage('build'){
             steps{
 
@@ -42,9 +37,9 @@ pipeline{
                 sh 'mvn clean:clean'
             }
         }
-        stage('Test the application'){
+        stage('junit test'){
             steps{
-                sh 'mvn verify:verify'
+                sh 'mvn surefire:test'
             }
         }
         stage('sonarqubequailty check'){
