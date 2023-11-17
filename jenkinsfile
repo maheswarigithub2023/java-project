@@ -19,6 +19,11 @@ pipeline{
                 git branch: 'master', credentialsId: 'github', url: 'https://github.com/Vamc-admin/java-project.git'
             }
         }
+        stage('clean'){
+            steps{
+                sh 'mvn clean:clean'
+            }
+        }
         stage('compile'){
             steps{
                 script{
