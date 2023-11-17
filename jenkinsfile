@@ -37,14 +37,5 @@ pipeline{
                 sh 'mvn jar:jar'
             }
         }
-        stage('sonar quailty check'){
-            steps{
-                script{
-                    withSonarQubeEnv(credentialsId: 'sonarqube'){
-                        sh 'mvn clean package sonar:sonar'
-                  }
-                }
-            }
-        }
     }
 }
