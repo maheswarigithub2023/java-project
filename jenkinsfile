@@ -19,11 +19,6 @@ pipeline{
                 git branch: 'master', credentialsId: 'github', url: 'https://github.com/Vamc-admin/java-project.git'
             }
         }
-        stage('clean'){
-            steps{
-                sh 'mvn clean:clean'
-            }
-        }
         stage('compile'){
             steps{
                 script{
@@ -42,11 +37,21 @@ pipeline{
                 sh 'mvn jar:jar'
             }
         }
+        stage('clean'){
+            steps{
+                sh 'mvn clean:clean'
+            }
+        }
+        stage('Test the application'){
+            steps{
+                sh 'mvn test'
+            }
+        }
         stage('sonarqubequailty check'){
             steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonarqube'){
-                        sh 'sonar:sonar'
+                        sh 'mvn sonar:sonar'
                   }
                 }
             }
