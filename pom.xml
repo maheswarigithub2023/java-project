@@ -33,6 +33,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
+                <extensions>${/var/lib/jenkins/workspace/java-project/target}/classes<extensions>
+            </plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>2.4.1</version>
@@ -66,7 +69,4 @@
 			</plugin>
 		</plugins>
 	</build>
-<properties>
-    <sonar.java.binaries>${/var/lib/jenkins/workspace/java-project/target}/classes</sonar.java.binaries>
-</properties>
 </project>
