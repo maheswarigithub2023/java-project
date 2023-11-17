@@ -3,7 +3,7 @@ pipeline{
     agent any
 
     environment{
-        APP_NAME = "registration_app"
+        APP_NAME = "java-app"
         RELEASE = "1.0.0"
         DOCKER_USER = "vamc470"
         DOCKER_PASS = "dockerhub"
