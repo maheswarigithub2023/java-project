@@ -32,9 +32,6 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<properties>
-              <sonar.java.binaries>${project.build.directory}/classes</sonar.java.binaries>
-            </properties>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
