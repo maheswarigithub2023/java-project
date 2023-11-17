@@ -34,7 +34,7 @@ pipeline{
         stage('build'){
             steps{
 
-                sh 'mvn war:war'
+                sh 'mvn jar:jar'
             }
         }
         stage('clean'){
