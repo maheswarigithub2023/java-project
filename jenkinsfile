@@ -44,7 +44,7 @@ pipeline{
         }
         stage('Test the application'){
             steps{
-                sh 'mvn test'
+                sh 'mvn verify:verify'
             }
         }
         stage('sonarqubequailty check'){
