@@ -46,11 +46,6 @@ pipeline{
                 sh 'mvn jar:jar'
             }
         }
-        stage('clean'){
-            steps{
-                sh 'mvn clean:clean'
-            }
-        }
         stage('sonarqubequailty check'){
             steps{
                 script{
